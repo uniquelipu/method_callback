@@ -70,12 +70,12 @@ public class MainActivity extends FlutterActivity {
                     channel.invokeMethod("callListener", args);
                 }
 
-                handler.postDelayed(this, 12000);
+                handler.postDelayed(this, 10000);
             }
         });
 
         // Run task
-        handler.postDelayed(callbackById.get(currentListenerId), 12000);
+        handler.postDelayed(callbackById.get(currentListenerId), 10000);
 
         // Return immediately
         result.success(null);

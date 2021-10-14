@@ -70,7 +70,7 @@ class PlaygroundState extends State<Playground> {
     if (running) return;
     running = true;
 
-    var cancel = await startListening((msg) {
+    var startTimer = await startListening((msg) {
       setState(() {
         log(msg);
       });
@@ -78,7 +78,7 @@ class PlaygroundState extends State<Playground> {
 
     await Future.delayed(Duration(seconds: 10));
 
-    cancel();
+    startTimer();
 
     // running = false;
   }
