@@ -11,21 +11,21 @@ class PlaygroundApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Playground(title: 'Plugin Playground'),
+      home: TimerPlayground(title: 'Timer Playground'),
     );
   }
 }
 
-class Playground extends StatefulWidget {
-  Playground({Key key, this.title}) : super(key: key);
+class TimerPlayground extends StatefulWidget {
+  TimerPlayground({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  PlaygroundState createState() => PlaygroundState();
+  TimerPlaygroundState createState() => TimerPlaygroundState();
 }
 
-class PlaygroundState extends State<Playground> {
+class TimerPlaygroundState extends State<TimerPlayground> {
 
   @override
   Widget build(BuildContext context) {
